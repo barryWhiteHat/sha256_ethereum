@@ -2,7 +2,8 @@
 
 #include "libsnark/gadgetlib1/gadget.hpp"
 #include "libsnark/gadgetlib1/protoboard.hpp"
-#include "libsnark/depends/libff/libff/common/default_types/ec_pp.hpp"
+
+#include "libff/common/default_types/ec_pp.hpp"
 #include "libsnark/reductions/r1cs_to_qap/r1cs_to_qap.hpp"
 
 
@@ -174,7 +175,7 @@ vector<unsigned long> bit_list_to_ints(vector<bool> bit_list, const size_t words
   return res;
 }
 
-int main() {
+int test() {
   default_ec_pp::init_public_params();
 
   protoboard<FieldT> pb;
